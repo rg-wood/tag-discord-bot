@@ -1,0 +1,76 @@
+{
+  "name": "tag-nick-discord-bot",
+  "version": "0.0.0",
+  "description": "Bot to tag nicks.",
+  "homepage": "",
+  "author": {
+    "name": "R.G. Wood",
+    "email": "ric@grislyeye.com",
+    "url": "https://grislyeye.com/"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "keywords": [
+    "bot",
+    "discord",
+    "nick",
+    "usernames",
+    "emoji"
+  ],
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-xo": "^0.25.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "husky": "^1.2.0",
+    "jest": "^23.5.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.2"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "scripts": {
+    "bot": "node ./lib/index.js",
+    "pretest": "eslint .",
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "repository": "grislyeye/tag-discord-bot",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cli-table2": "^0.2.0",
+    "clapp": "^1.3.3",
+    "discord.js": "^11.5.1"
+  }
+}

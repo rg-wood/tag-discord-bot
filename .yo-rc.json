@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "R.G. Wood",
+      "authorEmail": "ric@grislyeye.com",
+      "authorUrl": "https://grislyeye.com/"
+    }
+  }
+}
