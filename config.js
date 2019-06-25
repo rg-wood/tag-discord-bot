@@ -6,12 +6,12 @@ module.exports = {
   // The bot's command prefix. The bot will recognize as command any message that begins with it.
   // i.e: "-tag bot foo" will trigger the command "foo",
   //      whereas "Tag Bot foo" will do nothing at all.
-  prefix: "-tag bot",
+  prefix: "-tag",
 
   // Your bot's user token. If you don't know what that is, go here:
   // https://discordapp.com/developers/applications/me
   // Then create a new application and grab your token.
-  token: "",
+  token: process.env.TAG_BOT_DISCORD_TOKEN,
 
   // If this option is enabled, the bot will delete the message that triggered it, and its own
   // response, after the specified amount of time has passed.
