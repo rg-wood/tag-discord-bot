@@ -44,6 +44,15 @@ Similarly, the syntax for clearing tags is as follows:
 
 This should reset your nickname to its previous setting.
 
+You can also remove a tag using the following command:
+
+
+```
+-tag remove <@user> <tag>
+```
+
+The tag string matches loosely, so even if you provide a fragment it will still remove matching tags.
+
 ## License
 
 MIT © [R.G. Wood](https://grislyeye.com/)
