@@ -57,3 +57,15 @@ test("multi tagged nick should parse tag", () => {
 test("adding tag to tagged nick should result in multi-tagged nick", () => {
   expect(taggedNick.addTag("Test Tag 2")).toEqual(multiTaggedNick);
 });
+
+test("removing tag from tagged nick should result in untagged nick", () => {
+  expect(taggedNick.removeTag("Test Tag")).toEqual(untaggedNick);
+});
+
+test("removing tag from multi-tagged nick should result in tagged nick", () => {
+  expect(multiTaggedNick.removeTag("Test Tag 2")).toEqual(taggedNick);
+});
+
+test("removing tag with partial match  ignoring case from tagged nick should result in untagged nick", () => {
+  expect(taggedNick.removeTag("tag")).toEqual(untaggedNick);
+});
