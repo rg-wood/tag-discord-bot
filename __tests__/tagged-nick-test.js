@@ -43,3 +43,17 @@ test("clearing tagged nick should result in untagged nick", () => {
 test("adding tag to untagged nick should result in tagged nick", () => {
   expect(untaggedNick.addTag("Test Tag")).toEqual(taggedNick);
 });
+
+const multiTaggedNick = new TaggedNick("Ricardo [Test Tag, Test Tag 2]");
+
+test("multi tagged tagged nick should parse display name", () => {
+  expect(multiTaggedNick.name).toBe("Ricardo");
+});
+
+test("multi tagged nick should parse tag", () => {
+  expect(multiTaggedNick.tags).toContain("Test Tag 2");
+});
+
+test("adding tag to tagged nick should result in multi-tagged nick", () => {
+  expect(taggedNick.addTag("Test Tag 2")).toEqual(multiTaggedNick);
+});
