@@ -57,7 +57,9 @@
       "node": true
     },
     "rules": {
-      "prettier/prettier": "error"
+      "prettier/prettier": "error",
+      "guard-for-in": "off",
+      "block-scoped-var": "off"
     },
     "plugins": [
       "prettier"

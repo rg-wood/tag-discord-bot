@@ -1,5 +1,4 @@
 module.exports = {
-
   // Your bot name. Typically, this is your bot's username without the discriminator.
   // i.e: if your bot's username is MemeBot#0420, then this option would be MemeBot.
   name: "Tag Nick Bot",
@@ -7,7 +6,7 @@ module.exports = {
   // The bot's command prefix. The bot will recognize as command any message that begins with it.
   // i.e: "-tag bot foo" will trigger the command "foo",
   //      whereas "Tag Bot foo" will do nothing at all.
-  prefix:  "-tag bot",
+  prefix: "-tag bot",
 
   // Your bot's user token. If you don't know what that is, go here:
   // https://discordapp.com/developers/applications/me
@@ -22,6 +21,6 @@ module.exports = {
   // More info: https://discordapp.com/developers/docs/topics/permissions
   deleteAfterReply: {
     enabled: true,
-    time: 10000, // In milliseconds
+    time: 10000 // In milliseconds
   }
 };
